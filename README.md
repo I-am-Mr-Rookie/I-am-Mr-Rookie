@@ -1,22 +1,40 @@
-# Koushik Sadhak Jeet
+# Hi, I'm Koushik Sadhak Jeet
 
-I build practical AI agents and data products that are useful outside a demo: grounded in evidence, explicit about uncertainty, and designed for real people.
+**CSE student at Shahjalal University of Science and Technology, Bangladesh.**
 
-## What I am working on
+I build practical AI agents and developer tools: grounded in evidence, explicit about uncertainty, and designed around real problems. My projects explore agriculture, document workflows, and reliable human-facing AI.
 
-- **[AgriSense](https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense)** — an open-source AI farm companion with Bangla/English chat, seasonal planning, weather and market intelligence, plant-image assistance, voice, and compact PostgreSQL memory.
-- **Applied AI systems** — conversational orchestration, tool-use reliability, multimodal workflows, and safe human-facing interfaces.
-- **Developer tools and data workflows** — reproducible pipelines, readable documentation, and small systems that are easy to test and maintain.
+## Featured projects
 
-## Working principles
+### [AgriSense](https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense)
+An MIT-licensed AI farm companion for Bangladesh, with Bangla/English interaction, crop planning, weather and market sources, plant-image assistance, and optional voice.
 
-- Start from the user's real problem, not the model's cleverest output.
+- **Engineering focus:** bounded tool use, source provenance, deterministic safety checks, and PostgreSQL-backed memory.
+- **Stack:** React, Node.js, Express, PostgreSQL, and optional OpenAI integrations.
+- **Start here:** [README and local setup](https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense#readme) · [Contributing](https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense/blob/main/CONTRIBUTING.md)
+
+### [PDF → LaTeX](https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY)
+An MIT-licensed Python pipeline for turning scanned exam papers into editable LaTeX, with diagram extraction and PDF compilation.
+
+- **Engineering focus:** resumable checkpoints, API-budget awareness, and compiler-log-guided correction.
+- **Stack:** Python, Gemini API, Poppler, and LaTeX.
+- **Start here:** [README and setup](https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY#readme) · [Contributing](https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY/blob/main/CONTRIBUTING.md)
+
+These are evolving projects. Provider-backed features require configuration; generated advice and converted documents need human review.
+
+## How I build
+
+- Start with a real user problem, not a model demo.
 - Separate retrieved evidence, deterministic calculations, and generated language.
-- Make failure states recoverable and security boundaries visible.
+- Make failures recoverable and security boundaries explicit.
 - Prefer a small verified workflow over a large unmeasured promise.
 
 ## Tools I use
 
-`Python` · `JavaScript` · `React` · `Node.js` · `PostgreSQL` · `OpenAI APIs` · `scikit-learn`
+Python · JavaScript · React · Node.js · PostgreSQL · OpenAI and Gemini APIs · scikit-learn
 
-Bangladesh-based CSE student. Open to thoughtful collaboration on applied AI, agriculture, and developer tooling.
+## Collaborate
+
+I welcome collaboration on applied AI, Bangla/English experiences, agriculture, and student-facing developer tools. Useful contributions include reproducible bug reports, documentation improvements, evaluation examples, and carefully scoped pull requests.
+
+Explore the repositories above and their contribution guides to get started.
