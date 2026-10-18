@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koushik Sadhak Jeet — AI agents &amp; developer tools</title>
+<meta name="description" content="CSE student at SUST, Bangladesh. Practical AI agents and developer tools: AgriSense and PDF → LaTeX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Source+Code+Pro:wght@400;600&display=swap">
+<style>
+  :root {
+    --paper: #f7f3ea; --ink: #23201b; --muted: #5d564b; --rule: #d8cfbf;
+    --accent: #9a4a1c; --card: #fffdf8;
+    --serif: "Crimson Pro", Georgia, "Times New Roman", serif;
+    --mono: "Source Code Pro", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #17150f; --ink: #ece5d6; --muted: #b3a994; --rule: #3a342a; --accent: #e0a15e; --card: #1f1c15; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 1.2rem/1.6 var(--serif); }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--card); padding: .5rem 1rem; z-index: 1; }
+
+  header.bar { border-bottom: 1px solid var(--rule); font: 0.85rem/1 var(--mono); }
+  header.bar .wrap { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; justify-content: space-between; align-items: center; padding-block: 1rem; }
+  header.bar nav ul { display: flex; flex-wrap: wrap; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+  header.bar a { color: var(--ink); text-decoration: none; }
+  header.bar a:hover { color: var(--accent); }
+
+  .wrap { max-width: 46rem; margin-inline: auto; padding-inline: 1.25rem; }
+  main section { padding-block: 2.5rem; border-bottom: 1px solid var(--rule); }
+  main section:last-child { border-bottom: 0; }
+
+  h1, h2, h3 { font-weight: 600; line-height: 1.15; }
+  h1 { font-size: clamp(2.2rem, 6vw, 2.75rem); margin: 0 0 .75em; }
+  h1 + .lede { margin-top: -.5em; }
+  h2 { font: 600 0.8rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.5rem; }
+  h3 { font-size: 1.6rem; margin: 0 0 .4rem; }
+  h3 a { color: var(--ink); text-decoration: none; }
+  h3 a:hover { color: var(--accent); }
+  .lede { font-size: 1.35rem; color: var(--muted); }
+  .hero { padding-block: 3.5rem 2.5rem; }
+
+  .projects { display: grid; gap: 1.5rem; }
+  .project { background: var(--card); border: 1px solid var(--rule); padding: 1.5rem; }
+  .project dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1rem; margin: 1rem 0 0; }
+  .project dt { font: 600 .75rem/1.9 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .project dd { margin: 0; }
+  @media (max-width: 34rem) { .project dl { grid-template-columns: 1fr; } .project dd { margin-bottom: .5rem; } }
+  .tag { font: .7rem/1 var(--mono); border: 1px solid var(--rule); padding: .25rem .45rem; color: var(--muted); vertical-align: middle; margin-left: .4rem; }
+  .note { font-style: italic; color: var(--muted); margin-top: 1.5rem; }
+
+  ul.principles { padding-left: 1.2rem; margin: 0; }
+  ul.principles li { margin-bottom: .4rem; }
+  .tools { font: .95rem/1.9 var(--mono); }
+
+  .btn { display: inline-block; font: 600 .9rem/1 var(--mono); color: var(--ink); background: var(--card); border: 1.5px solid var(--ink); padding: .8rem 1.1rem; text-decoration: none; box-shadow: 3px 3px 0 var(--ink); transition: transform 120ms ease-out, box-shadow 120ms ease-out; }
+  .btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+  .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+
+  footer { font: .8rem/1.5 var(--mono); color: var(--muted); border-top: 1px solid var(--rule); padding-block: 1.5rem 2.5rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap">
+    <span>koushik@sust:~$</span>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#approach">approach</a></li>
+        <li><a href="#collaborate">collaborate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="name">
+    <h1 id="name">Hi, I'm Koushik Sadhak Jeet</h1>
+    <p class="lede">CSE student at Shahjalal University of Science and Technology, Bangladesh.</p>
+    <p>I build practical AI agents and developer tools: grounded in evidence, explicit about uncertainty, and designed around real problems. My projects explore agriculture, document workflows, and reliable human-facing AI.</p>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Featured projects</h2>
+    <div class="projects">
+      <article class="project">
+        <h3><a href="https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense">AgriSense</a> <span class="tag">MIT</span></h3>
+        <p>An AI farm companion for Bangladesh, with Bangla/English interaction, crop planning, weather and market sources, plant-image assistance, and optional voice.</p>
+        <dl>
+          <dt>Focus</dt><dd>Bounded tool use, source provenance, deterministic safety checks, and PostgreSQL-backed memory.</dd>
+          <dt>Stack</dt><dd>React, Node.js, Express, PostgreSQL, and optional OpenAI integrations.</dd>
+          <dt>Start</dt><dd><a href="https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense#readme">README and local setup</a> · <a href="https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense/blob/main/CONTRIBUTING.md">Contributing</a></dd>
+        </dl>
+      </article>
+      <article class="project">
+        <h3><a href="https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY">PDF → LaTeX</a> <span class="tag">MIT</span></h3>
+        <p>A Python pipeline for turning scanned exam papers into editable LaTeX, with diagram extraction and PDF compilation.</p>
+        <dl>
+          <dt>Focus</dt><dd>Resumable checkpoints, API-budget awareness, and compiler-log-guided correction.</dd>
+          <dt>Stack</dt><dd>Python, Gemini API, Poppler, and LaTeX.</dd>
+          <dt>Start</dt><dd><a href="https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY#readme">README and setup</a> · <a href="https://github.com/I-am-Mr-Rookie/AUTONOMOUS-PDF-TO-LATEX-USING-GOOGLE-AI-STUDIO-API-KEY/blob/main/CONTRIBUTING.md">Contributing</a></dd>
+        </dl>
+      </article>
+    </div>
+    <p class="note">These are evolving projects. Provider-backed features require configuration; generated advice and converted documents need human review.</p>
+  </section>
+
+  <section id="approach" aria-labelledby="approach-h">
+    <h2 id="approach-h">How I build</h2>
+    <ul class="principles">
+      <li>Start with a real user problem, not a model demo.</li>
+      <li>Separate retrieved evidence, deterministic calculations, and generated language.</li>
+      <li>Make failures recoverable and security boundaries explicit.</li>
+      <li>Prefer a small verified workflow over a large unmeasured promise.</li>
+    </ul>
+    <h2 style="margin-top:2.5rem">Tools I use</h2>
+    <p class="tools">Python · JavaScript · React · Node.js · PostgreSQL · OpenAI and Gemini APIs · scikit-learn</p>
+  </section>
+
+  <section id="collaborate" aria-labelledby="collab-h">
+    <h2 id="collab-h">Collaborate</h2>
+    <p>I welcome collaboration on applied AI, Bangla/English experiences, agriculture, and student-facing developer tools. Useful contributions include reproducible bug reports, documentation improvements, evaluation examples, and carefully scoped pull requests.</p>
+    <p><a class="btn" href="https://github.com/I-am-Mr-Rookie">github.com/I-am-Mr-Rookie →</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Koushik Sadhak Jeet · <a href="https://github.com/I-am-Mr-Rookie/I-am-Mr-Rookie">source</a></div>
+</footer>
+</body>
+</html>
