@@ -1,6 +1,6 @@
 # Koushik Sadhak Jeet
 
-Computer Science and Engineering student at Shahjalal University of Science and Technology, Bangladesh. I build AI agents, optimization tools, and software for learners. I focus on keeping model decisions reviewable and using deterministic checks where correctness matters.
+Computer Science and Engineering student at Shahjalal University of Science and Technology, Bangladesh. I build AI agents and optimization tools. I focus on keeping model decisions reviewable and using deterministic checks where correctness matters.
 
 ## Featured projects
 
@@ -12,6 +12,3 @@ An energy scheduling API built for BUP CSE Fest 2026. It translates plain-langua
 
 ### [AgriSense](https://github.com/I-am-Mr-Rookie/rookieCoders_AgriSense)
 An open-source Bangla/English farming assistant for Bangladesh. It combines crop planning, weather and market sources, and plant-image assistance while distinguishing retrieved evidence from generated advice.
-
-### [Rookie Coach](https://github.com/I-am-Mr-Rookie/rookie-coach)
-An early-stage browser extension for competitive programming students. It turns a student's own Codeforces submission history into a Markdown report they can review without uploading it to a coaching service.
